@@ -1,0 +1,27 @@
+# Allowlisting gitignore template for GO projects prevents us
+# from adding various unwanted local files, such as generated
+# files, developer configurations or IDE-specific files etc.
+#
+
+# Recommended: Go.AllowList.gitignore but to make this AllowList to work, you'd have to name it as .gitignore only.
+# Or can the .gitignore file naming convention be changed? Not sure on this part.
+
+# ! (not) operator is used to exclude a pattern
+
+# Ignore everything
+*
+
+# But not these files...
+!/.gitignore
+
+!*.go
+!go.sum
+!go.mod
+
+!README.md
+!LICENSE
+
+# !Makefile
+
+# ...even if they are in subdirectories
+!*/
